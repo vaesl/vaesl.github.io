@@ -18,9 +18,7 @@
 		      <div align="center">
 			      <table width="90%" border="0" align="center" cellpadding="0" cellspacing="0">
 			        <tr>
-			         <!--
-			         Hyper links to authors' homepages
-			          <td width="25%" height="30" align='center'><a href="http://cv.postech.ac.kr/~maga33" target="_blank">Seunghoon Hong<sup>1</sup></a></td>
+			         <!-- <td width="25%" height="30" align='center'><a href="http://cv.postech.ac.kr/~maga33" target="_blank">Seunghoon Hong<sup>1</sup></a></td>
 			          <td width="25%" height="30" align='center'><a href="https://sites.google.com/a/umich.edu/junhyuk-oh/" target="_blank">Junhyuk Oh<sup>2</sup></a></td>
 					  <td width="25%" height="30" align='center'><a href="http://cv.postech.ac.kr/~bhhan" target="_blank">Bohyung Han<sup>1</sup></a></td>
 			          <td width="25%" height="30" align='center'><a href="http://web.eecs.umich.edu/~honglak" target="_blank">Honglak Lee<sup>2</sup></a></td>
@@ -70,11 +68,11 @@ collected Semantic-Retarget dataset (1080 images). Results from the Amazon Mecha
          <p align="justify"> 
          	Figure 1 illustrates overall architecture of the proposed algorithm. Our model learns knowledge for semantic segmentation for images with weak-annotations (target domain) by leveraging strong annotations from different categories (source domain).
          </p>
-         <img src="images/architecture.png" alt="" width="1034" height="440" align="bottom" />
+         <img src="images/architecture.png" alt="" width="1000" height="219" align="bottom" />
          <div class="caption">
             <p class="caption-content">
                <strong class="fig-label">Figure 1</strong>. 
-The framework of importance map fusion network.
+Overall architecture of the proposed algorithm. Given a feature extracted from the encoder, the attention model estimates adaptive spatial saliency of each category associated with input image. The outputs of attention model are subsequently fed into the decoder, which generates foreground segmentation mask of each focused region. During training, we fix the encoder by pre-trained weights, and leverage the segmentation annotations from source domain to train both the decoder and the attention model, and image-level class labels in both domains to train the attention model. After training, semantic segmentation on the target domain is performed naturally by exploiting the decoder trained with source images and the attention model adapted to target domain.
             </p>
          </div>
 			<div class="line"></div>
@@ -88,11 +86,11 @@ The framework of importance map fusion network.
      	<div class="wrap">
          <h2 id="subject">Performance</h2>
         	<p align="justify">
-balabalabalabala
+The proposed algorithm outperforms all weakly-supervised semantic segmentation techniques with substantial margins, and even comparable to semi-supervised semantic segmentation methods, which exploits a small number of ground-truth segmentations in addition to weakly-annotated images for training. We refer the paper for more results.
          </p>
  		 <p align="center">
-			Table 1. Quantified evaluation of importance map regression on the validation-set in S-Retarget dataset.
-		  <img src="images/table_val.png" alt="" width="544" height="361" align="bottom" />
+			Table 1. Evaluation results on PASCAL VOC 2012 validation set.
+		  <img src="images/table_val.png" alt="" width="1000" height="201" align="bottom" />
 		 </p>
 		<div class="line"></div>
 	</div>
@@ -104,28 +102,24 @@ balabalabalabala
 	    	<h2 id="subject">Paper</h2>
 			<div class="paper-info-box" align="center">
 				<div class="paper-title-box">
-					SP-DIR: Semantic Preserving Deep Image Retargeting
+					Learning Transferrable Knowledge for Semantic Segmentation with Deep Convolutional Neural Network
 				</div>
 				<div class="paper-author-box">
- 					Si Liu, Zhen Wei
+ 					Seunghoon Hong, Junhyuk Oh, Bohyung Han and Honglak Lee
 				</div>
 			</div>
 		      <div align="center">
 			      <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
 			        <tr>
-			          <!--
-			          Paper preview image
 			          <td width="18%" align='center'> <a target="_blank" href="http://arxiv.org/abs/1512.07928"> <div align="center"> <img src='images/paper.png' width="140" height="180"></div></a> </td>
-			          -->
-			          <td width="18%" align='center'> <a target="_blank"> <div align="center"> <img src='images/kidding.png' width="140" height="180"></div></a> </td>
                                   <td width="82%">
                                     <pre>
                                       <code>
-@inproceedings{liu2016SP_DIR,
-  title={SP-DIR: Semantic Preserving Deep Image Retargeting},
-  author={Liu, Si and Wei, Zhen},
-  journal = {arXiv preprint arXiv:1605.xxxxxx},
-  year={2016}
+@inproceedings{hong2015TransferNet,
+  title={Learning Transferrable Knowledge for Semantic Segmentation with Deep Convolutional Neural Network},
+  author={Hong, Seunghoon and Oh, Junhyuk and Han, Bohyung and Lee, Honglak},
+  journal = {arXiv preprint arXiv:1512.07928},
+  year={2015}
 }
                                       </code>
                                     </pre>
@@ -137,11 +131,7 @@ balabalabalabala
 -->
 		            </tr>
 			        <tr>
-			          <!--
-			          Paper download link
 			          <td width="19%" align='center'> <a target="_blank" href="http://arxiv.org/abs/1512.07928">[arxiv preprint]</a></td>
-			          -->
-			          <td width="19%" align='center'> <a target="_blank">[arxiv preprint]</a></td>
 		            </tr>
 		          </table>
 	        </div>
@@ -168,12 +158,10 @@ balabalabalabala
      	<div class="wrap">
          <h2 id="subject">References</h2>
          <ul class="ref-list" align="justify">
-            <!--
             <li class="ref-item">G. Papandreou, L.-C. Chen, K. Murphy, and A. L. Yuille. Weakly-and semi-supervised learning of a DCNN for semantic image segmentation. In ICCV, 2015.</li>
             <li class="ref-item">D. Pathak, P. Krahenbuhl, and T. Darrell. Constrained convolutional neural networks for weakly supervised segmentation. In ICCV, 2015</li>
             <li class="ref-item">P. O. Pinheiro and R. Collobert. From image-level to pixel-level labeling with convolutional networks. In CVPR, 2015.</li>
             <li class="ref-item">S. Hong, H. Noh, and B. Han. Decoupled deep neural network for semi-supervised semantic segmentation. In NIPS, 2015. </li>
-            -->
          </ul>
       </div>
  	</div>
