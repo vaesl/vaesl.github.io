@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<meta name="description" content="Video Event Detection" />
+	<meta name="keywords" content="Constraint Flow" />	
+	<meta name="author" content="Wei Zhen" />
+	<link rel="stylesheet" href="css/main.css" type="text/css" />
+	<title>SP-DIR: Semantic Preserving Deep Image Retargeting</title>
+</head>
+
+<body>
+
+	<div id="header">
+		<div class="wrap">
+		  <div id="intro">
+		    	<h1 align="center" id="logo">SP-DIR: Semantic Preserving Deep Image Retargeting</h1>
+		      <div align="center">
+			      <table width="90%" border="0" align="center" cellpadding="0" cellspacing="0">
+			        <tr>
+			         <!--
+			         Hyper links to authors' homepages
+			          <td width="25%" height="30" align='center'><a href="http://cv.postech.ac.kr/~maga33" target="_blank">Seunghoon Hong<sup>1</sup></a></td>
+			          <td width="25%" height="30" align='center'><a href="https://sites.google.com/a/umich.edu/junhyuk-oh/" target="_blank">Junhyuk Oh<sup>2</sup></a></td>
+					  <td width="25%" height="30" align='center'><a href="http://cv.postech.ac.kr/~bhhan" target="_blank">Bohyung Han<sup>1</sup></a></td>
+			          <td width="25%" height="30" align='center'><a href="http://web.eecs.umich.edu/~honglak" target="_blank">Honglak Lee<sup>2</sup></a></td>
+			          -->
+			          <td width="25%" height="30" align='center'><a target="_blank">Si Liu<sup>1</sup></a></td>
+					  <td width="25%" height="30" align='center'><a target="_blank">Zhen Wei<sup>2</sup></a></td>
+		            </tr>
+					<tr>
+			          <td height="30" colspan="4" align='center'><sup>1</sup>Institute of Information Engineering, Chinese Academy of Sciences, Beijing, P.R.China</td>
+			          <p align="center">
+			            </p>
+		            </tr>
+		            <tr>
+			          <td height="30" colspan="4" align='center'><sup>2</sup>YingCai Experimental School, University of Electronic Science and Technology of China, Sichuan, P.R.China</td>
+			          <p align="center">
+			            </p>
+		            </tr>
+		          </table>
+	        </div>
+          </div>
+		<div class="nline1"></div>
+		</div>
+	</div>
+
+
+        
+    <div id="cont">
+		<div class="wrap">        	
+	    	<h2 id="subject">Abstract</h1>
+            <p align="justify">
+				Image retargeting is applied to display any size of images via devices (e.g., cell phone, TV monitors) with possibly different resolutions. In order to fit the target resolution, certain less important pixels are distorted. Therefore,
+the key problem is to determine the importance of each pixel. All pixels’ importance scores form an importance map. Different from traditional methods which generate the importance map in a bottom-up manner such as estimating eye
+fixation, the proposed Semantic Preserving Deep Image Retargeting (SP-DIR) method generates the importance map based on a top-down criterion: the target image retains the semantic meaning embedded in the original image as much
+as possible. To this end, we first extract the semantic meaning conveyed in the original image using 5 state-of-the-art deep image understanding modules, including image, scene, action classification, object detection and image parsing.
+All the modules generate their own importance maps, where bigger values indicate more semantic meaning carried by the corresponding pixels. Extensive experiments are conducted on the benchmark RetargetMe (80 images) and our
+collected Semantic-Retarget dataset (1080 images). Results from the Amazon Mechanical Turk show the significant advantage of our DIR methods over the state-of-the-art image retargeting methods.
+            </p>
+			<div class="line"></div>
+      </div>
+    </div>
+
+
+
+   <div id="cont">
+      <div class="wrap">
+         <h2 id="subject">Architecture Overview</h2>
+         <p align="justify"> 
+         	Figure 1 illustrates overall architecture of the proposed algorithm. Our model learns knowledge for semantic segmentation for images with weak-annotations (target domain) by leveraging strong annotations from different categories (source domain).
+         </p>
+         <img src="images/architecture.png" alt="" width="1034" height="440" align="bottom" />
+         <div class="caption">
+            <p class="caption-content">
+               <strong class="fig-label">Figure 1</strong>. 
+The framework of importance map fusion network.
+            </p>
+         </div>
+			<div class="line"></div>
+      </div>
+   </div>      
+
+	<div id="footer">
+    
+    </div>
+      	<div id="cont">
+     	<div class="wrap">
+         <h2 id="subject">Performance</h2>
+        	<p align="justify">
+balabalabalabala
+         </p>
+ 		 <p align="center">
+			Table 1. Quantified evaluation of importance map regression on the validation-set in S-Retarget dataset.
+		  <img src="images/table_val.png" alt="" width="544" height="361" align="bottom" />
+		 </p>
+		<div class="line"></div>
+	</div>
+
+
+
+<div id="cont">
+		<div class="wrap">        	
+	    	<h2 id="subject">Paper</h2>
+			<div class="paper-info-box" align="center">
+				<div class="paper-title-box">
+					SP-DIR: Semantic Preserving Deep Image Retargeting
+				</div>
+				<div class="paper-author-box">
+ 					Si Liu, Zhen Wei
+				</div>
+			</div>
+		      <div align="center">
+			      <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+			        <tr>
+			          <!--
+			          Paper preview image
+			          <td width="18%" align='center'> <a target="_blank" href="http://arxiv.org/abs/1512.07928"> <div align="center"> <img src='images/paper.png' width="140" height="180"></div></a> </td>
+			          -->
+			          <td width="18%" align='center'> <a target="_blank"> <div align="center"> <img src='images/kidding.png' width="140" height="180"></div></a> </td>
+                                  <td width="82%">
+                                    <pre>
+                                      <code>
+@inproceedings{liu2016SP_DIR,
+  title={SP-DIR: Semantic Preserving Deep Image Retargeting},
+  author={Liu, Si and Wei, Zhen},
+  journal = {arXiv preprint arXiv:1605.xxxxxx},
+  year={2016}
+}
+                                      </code>
+                                    </pre>
+                                  </td>
+
+<!-- 
+                                  <td width="41%" align='center'> <a href="data/poster_CVPR2011_event.pdf"> <div align="center"> <img src='images/poster.png'></div></a> </td>
+			          <td width="41%" align='center'> <a href="data/constflow.zip"> <div align="center"> <img src='images/code.png'></div></a> </td>
+-->
+		            </tr>
+			        <tr>
+			          <!--
+			          Paper download link
+			          <td width="19%" align='center'> <a target="_blank" href="http://arxiv.org/abs/1512.07928">[arxiv preprint]</a></td>
+			          -->
+			          <td width="19%" align='center'> <a target="_blank">[arxiv preprint]</a></td>
+		            </tr>
+		          </table>
+	        </div>
+			<div class="line"></div>
+      </div>
+      </div>
+
+
+
+
+
+
+    <div id="cont">
+		<div class="wrap">        	
+	    	<h2 id="subject">Code</h2>
+         <p align="justify">
+            The code and trained model for the proposed method will be released soon.
+         </p>
+			<div class="line"></div>
+    	</div>
+	</div>
+
+  	<div id="cont">
+     	<div class="wrap">
+         <h2 id="subject">References</h2>
+         <ul class="ref-list" align="justify">
+            <!--
+            <li class="ref-item">G. Papandreou, L.-C. Chen, K. Murphy, and A. L. Yuille. Weakly-and semi-supervised learning of a DCNN for semantic image segmentation. In ICCV, 2015.</li>
+            <li class="ref-item">D. Pathak, P. Krahenbuhl, and T. Darrell. Constrained convolutional neural networks for weakly supervised segmentation. In ICCV, 2015</li>
+            <li class="ref-item">P. O. Pinheiro and R. Collobert. From image-level to pixel-level labeling with convolutional networks. In CVPR, 2015.</li>
+            <li class="ref-item">S. Hong, H. Noh, and B. Han. Decoupled deep neural network for semi-supervised semantic segmentation. In NIPS, 2015. </li>
+            -->
+         </ul>
+      </div>
+ 	</div>
+
+</body>
+</html>
