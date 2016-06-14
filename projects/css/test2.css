@@ -3,10 +3,10 @@
 /*body { font: 1em Georgia, "Times New Roman", Arial, Sans-Serif; color: #2F4F4F; }*/
 body { font: 1em Arial; color: #2F4F4F; }
 
-a { color: #2F9D27; text-decoration: none; }
-h1 { color: #191970; font-size: 1.8em; font-weight: thick; }
-h2 { color: #191970; font-size: 1.3em; font-weight: thick; }
-h3 { color: #191970; font-size: 1.0em; font-weight: thick; }
+a { color: #ea7500; text-decoration: none;  text-shadow: 0.8px 0.5px 1px #ff9244;}
+h1 { color: #000000; font-size: 1.8em; font-weight: thick;  text-shadow: 1px 1px 1px #8e8e8e;}
+h2 { color: #FF8000; font-size: 1.3em; font-weight: thick; }
+h3 { color: #FF8000; font-size: 1.0em; font-weight: thick; }
 p  { clear: both; margin: 5px 0 15px; line-height: 1.3em; }
 .clear { clear: both; }
 .line { clear: both; width: 1000px; border-bottom: 1px solid #ddd; margin: 20px 0 20px; }
