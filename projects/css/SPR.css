@@ -3,8 +3,8 @@
 /*body { font: 1em Georgia, "Times New Roman", Arial, Sans-Serif; color: #2F4F4F; }*/
 body { font: 1em Arial; color: #2F4F4F; }
 
-a { color: #ea7500; text-decoration: none;  text-shadow: 0.8px 0.5px 1px #ff9244;}
-h1 { color: #000000; font-size: 1.8em; font-weight: thick;  text-shadow: 1px 1px 1px #8e8e8e;}
+a { color: #ea7500; text-decoration: none;  text-shadow: 0.8px 0.5px 0.5px #ff9244;}
+h1 { color: #000000; font-size: 2.2em; font-weight: thick;  text-shadow: 1px 1px #8e8e8e;}
 h2 { color: #FF8000; font-size: 1.3em; font-weight: thick; }
 h3 { color: #FF8000; font-size: 1.0em; font-weight: thick; }
 p  { clear: both; margin: 5px 0 15px; line-height: 1.3em; }

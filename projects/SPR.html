@@ -9,14 +9,22 @@
 	<title>Semantic Preserving Retargeting</title>
 </head>
 
+
 <body>
 
+
+<!-- --------------------------------
+-
+- header
+-
+---- --------------------------------
+-->  
 	<div id="header">
 		<div class="wrap">
 		  <div id="intro">
 		    	<h1 align="center" id="logo">Semantic Preserving Retargeting</h1>
 		      <div align="center">
-			      <table width="90%" border="0" align="center" cellpadding="0" cellspacing="0">
+			      <table width="60%" border="0" align="center" cellpadding="0" cellspacing="0">
 			        <tr>
 			         <!--
 			         Hyper links to authors' homepages
@@ -30,28 +38,32 @@
 					  <td width="25%" height="30" align='center'><a target="_blank">Yao Sun<sup>1</sup></a></td>
 					  <td width="25%" height="30" align='center'><a target="_blank">Xinyu Ou<sup>3</sup></a></td>
 		            </tr>
+		        </table>
+		        <table>
 		            <tr>
 		              <td width="25%" height="30" align='center'><a target="_blank">Xiaochun Cao<sup>1</sup></a></td>
 					  <td width="25%" height="30" align='center'><a target="_blank">Shuicheng Yan<sup>4</sup></a></td>
 		            </tr>
+		        </table>
+		        <table>
 					<tr>
-			          <td height="30" colspan="4" align='center'><sup>1</sup>Institute of Information Engineering, Chinese Academy of Sciences, Beijing, P.R.China</td>
+			          <td height="20" colspan="4" align='center'><sup>1</sup>Institute of Information Engineering, Chinese Academy of Sciences, Beijing, P.R.China</td>
 			          <p align="center">
 			            </p>
 		            </tr>
 		            <tr>
-			          <td height="30" colspan="4" align='center'><sup>2</sup>YingCai Honors School, University of Electronic Science and Technology of China, Sichuan, P.R.China</td>
+			          <td height="20" colspan="4" align='center'><sup>2</sup>YingCai Honors School, University of Electronic Science and Technology of China, Sichuan, P.R.China</td>
 			          <p align="center">
 			            </p>
 		            </tr>
 		            <tr>
-			          <td height="30" colspan="4" align='center'><sup>3</sup>School of Computer Science and Technology, Huazhong University of
+			          <td height="20" colspan="4" align='center'><sup>3</sup>School of Computer Science and Technology, Huazhong University of
 Science and Technology, Hubei, P.R.China</td>
 			          <p align="center">
 			            </p>
 		            </tr>
 		            <tr>
-			          <td height="30" colspan="4" align='center'><sup>4</sup>National University of Singapore, Singapore</td>
+			          <td height="20" colspan="4" align='center'><sup>4</sup>National University of Singapore, Singapore</td>
 			          <p align="center">
 			            </p>
 		            </tr>
@@ -63,38 +75,143 @@ Science and Technology, Hubei, P.R.China</td>
 	</div>
 
 
-        
+
+<!-- --------------------------------
+-
+- Abstract
+-
+---- --------------------------------
+-->        
     <div id="cont">
 		<div class="wrap">        	
 	    	<h2 id="subject">Abstract</h1>
-            <p align="justify">
-				Image retargeting is applied to display any size of images via devices (e.g., cell phone, TV monitors) with possibly different resolutions. In order to fit the target resolution, certain less important pixels are distorted. Therefore,
-the key problem is to determine the importance of each pixel. All pixels’ importance scores form an importance map. Different from traditional methods which generate the importance map in a bottom-up manner such as estimating eye
-fixation, the proposed Semantic Preserving Deep Image Retargeting (SP-DIR) method generates the importance map based on a top-down criterion: the target image retains the semantic meaning embedded in the original image as much
-as possible. To this end, we first extract the semantic meaning conveyed in the original image using 5 state-of-the-art deep image understanding modules, including image, scene, action classification, object detection and image parsing.
-All the modules generate their own importance maps, where bigger values indicate more semantic meaning carried by the corresponding pixels. Extensive experiments are conducted on the benchmark RetargetMe (80 images) and our
-collected Semantic-Retarget dataset (1080 images). Results from the Amazon Mechanical Turk show the significant advantage of our DIR methods over the state-of-the-art image retargeting methods.
+            <p align="justify" style="text-indent:2em">
+				Image retargeting is applied to display any size of images via devices (e.g., cell phone, TV monitors) with
+possibly different resolutions. In order to fit the target resolution,
+certain less important pixels are distorted. Therefore,
+the key problem is to determine the importance of each
+pixel. All pixels’ importance scores form an importance map.
+Different from traditional methods which generate the importance
+map in a bottom-up manner such as estimating eye
+fixation, the proposed Semantic Preserving Retargeting
+(SPR) method generates the importance map
+based on a top-down criterion: the target image retains the
+semantic meaning embedded in the original image as much
+as possible. To this end, we first extract the semantic meaning
+conveyed in the original image using 5 state-of-the-art deep image understanding modules, including image, scene,
+action classification, object detection and image parsing. All
+the modules generate their own importance maps, where
+bigger values indicate more semantic meaning carried by the
+corresponding pixels. Extensive experiments are conducted
+on the benchmark RetargetMe (80 images) and our collected
+Semantic-Retarget dataset (1,080 images). Results from the
+Amazon Mechanical Turk show the significant advantage of
+our DIR methods over the state-of-the-art image retargeting
+methods.
             </p>
 			<div class="line"></div>
       </div>
     </div>
 
+<!-- --------------------------------
+-
+- The S-Retarget dataset
+-
+---- --------------------------------
+-->
+<div id="cont">
+		<div class="wrap">        	
+	    	<h2 id="subject">The S-Retarget Dataset</h2>
+	    	<p align="justify" style="text-indent:2em"> 
+	    		To comprehensively evaluate different image retargeting methods, we
+	    		 build a dataset much larger than existing retarget datasets called Semantic-Retarget
+	    		 (S-Retarget) dataset with 1528 images. We manually selected images from existing datasets
+	    		 and search engines. Each image has an aspect ratio greater than 1 to better fit the
+	    		 retargeting problem.According to the contents, all images are divided into 6 categories,
+	    		  including single person, multiple people, single object, multiple objects, 
+	    		 indoor scene and outdoor scene.
+	    	</p>
+	    	<h3 id="subject">Annotation</h3>
+	    	<p align="justify" style="text-indent:2em"> 
+	    		To annotate the importance maps for each images, we asked 5 annotators firstly write down 
+	    		the semantic meaning of the image. Then the annotators rate all pixels according to the 
+	    		degrees of relevance to the global semantics with different values, i.e. 0 (not relevant)
+	    		, 0.5 (moderately relevant) and 1 (very relevant) are used here. The final importance map
+	    		 is obtained by averaging all annotations of each pixel.
+	    	</p>
+	    	<p align="justify" style="text-indent:2em"> 
+	    		Comparing with existing salinecy datasets, images in S-Retarget dataset are not bound to 
+	    		contain dominantly large objects and ground truthes are <strong class="fig-label">annotations with weights</strong>
+	    		with more information, rather than binary masks.
+	    	</p>
+	    	<p style="text-align:center">
+         		<img src="images/SPR/annotation_extended.png" alt="" width="800" height="461" align="bottom" />
+         	</p>
+         	<div class="caption">
+            	<p class="caption-content">
+               		<strong class="fig-label">Figure 1</strong>. 
+						Some instances of annotation in S-Retarget dataset. a) The original image; b) Annotations 
+						from two annotators; c) Final annotation; d) Image description. Each captions under every images describe the 
+						identity of <strong class="fig-label">annotations with weights</strong> while 
+						<font color="red">red and bold</font> words stand for essentially salient objects 
+						and <font color="blue">blue and italic</font> words stand for less salient objects.
+            	</p>
+         	</div>
+	    	<h3 id="subject">Download</h3>
+	    	<p align="justify" style="text-indent:2em"> 
+	    		The S-Retarget dataset will be released soon.
+	    	</p>
+	    	<div class="line"></div>
+        </div>
+</div>
 
 
+<!-- --------------------------------
+-
+- Architecture Overview
+-
+---- --------------------------------
+-->
    <div id="cont">
       <div class="wrap">
          <h2 id="subject">Architecture Overview</h2>
-         <p align="justify"> 
-         	Figure 1 illustrates overall architecture of the proposed algorithm. Our model learns knowledge for semantic segmentation for images with weak-annotations (target domain) by leveraging strong annotations from different categories (source domain).
+         <p align="justify" style="text-indent:2em"> 
+         	The goal of SPR is that the target image keeps
+the global semantics as much as possible. Technically, we
+need to generate a global importance map assigning higher
+weights to the pixels expressing the global semantics.
+		</p>
+		<p align="justify" style="text-indent:2em">
+         	Generating a global importance map is composed of two steps:
+1) decomposing global semantics into several local semantics. 2) fusing 
+the local semantics induced importance maps into a global importance
+map.The two processes are shown in the following two figures.
          </p>
-         <img src="images/SPR/architecture.png" alt="" width="1034" height="440" align="bottom" />
+         <p style="text-align:center">
+         	<img src="images/SPR/framework.png" alt="" width="800" height="282" align="bottom" />
+         </p>
          <div class="caption">
             <p class="caption-content">
                <strong class="fig-label">Figure 1</strong>. 
-The framework of importance map fusion network.
+The framework of generating local importance maps.
             </p>
          </div>
-			<div class="line"></div>
+         <p style="text-align:center">
+         	<img src="images/SPR/fusion_network.png" alt="" width="850" height="280" align="bottom" />
+         </p>
+         <div class="caption">
+            <p class="caption-content">
+               <strong class="fig-label">Figure 2</strong>. 
+The fusion network to synthesize global importance map.
+            </p>
+        </div>
+        <p align="justify" style="text-indent:2em"> 
+		 	The fused importance map, which captures the
+		 	context among local semantics and has higher weights
+			in the pixels corresponding to the global semantics, is fed
+			into any subsequent target image generation methods.
+		 </p>
+		<div class="line"></div>
       </div>
    </div>      
 
@@ -104,49 +221,106 @@ The framework of importance map fusion network.
       	<div id="cont">
      	<div class="wrap">
          <h2 id="subject">Performance</h2>
-        	<p align="justify">
-balabalabalabala
-         </p>
+         <h3 id="subject">Quantified Evaluation</h3>
+        	<p align="justify"  style="text-indent:2em">
+				We compare our importance maps with state-of-the-art saliency
+				generating methods under the four evaluation criteria of the MIT saliency
+ 				benchmark<sup>[1]</sup> and the Mean Average Error (MAE). For EMD, KL, MAE, the lower
+ 				 the better while for CC and SIM, the higher the better.
+			</p>
+        	<p align="justify"  style="text-indent:2em">
+				It can be observed that our fusion network performs best on
+				 the S-Retarget dataset under all evaluation metrics.
+         	</p>
  		 <p align="center">
-			Table 1. Quantified evaluation of importance map regression on the validation-set in S-Retarget dataset.
-		  <img src="images/SPR/table_val.png" alt="" width="544" height="361" align="bottom" />
+ 		 	<strong class="fig-label">Table 1. </strong>
+			Quantified evaluation of importance map regression on the validation-set in S-Retarget dataset.
+		  <img src="images/SPR/table_importance_map_baseline.png" alt="" width="500" height="334" align="bottom" />
 		 </p>
+		 <h3 id="subject">Retargeting Results</h3>
+		 	<p align="justify"  style="text-indent:2em">
+				We applied our system on S-Retarget dataset as well as the RetargetMe<sup>[2]</sup> dataset. The following retargeting
+				results show that our method can better preserve the semantic meanings in images.
+         	</p>
+         	<p align="center">
+		  		<img src="images/SPR/system_compare2.png" alt="" width="800" height="677" align="bottom" />
+		    </p>
+		    <div class="caption">
+            	<p class="caption-content">
+            		<strong class="fig-label">Figure 3</strong>. 
+		  				Comparisons with SOAT, ISC, Multi-operator, Warp, AAD , OSS on S-Retarget dataset. 6 rows show the results for single person,
+multiple people, single object, multiple objects, indoor scene and outdoor scene, respectively
+		 	    </p>
+        	</div>
+		 	<p align="center">
+		  		<img src="images/SPR/figure12-2.png" alt="" width="800" height="365" align="bottom" />
+		  	</p>
+		  	<div class="caption">
+            	<p class="caption-content">
+            		<strong class="fig-label">Figure 4</strong>. 
+		  				Results on RetargetMe dataset. Target images are obtained by using 3 retargeting methods (AAD, Multi-Op, and IF, and 9 importance
+maps ( eDN, GC, oriIF, DNEF, RCC, fine-tuned MC, fine-tuned Mr-cnn, fine-tuned SalNet and our method).
+		 		</p>
+        	</div>
+         	<p align="justify"  style="text-indent:2em">
+				We also conducted human evaluations on the Amazon Mechanical Turk (AMT). Our target image and the result
+				 by a baseline are shown in randomly order to the AMT workers, who are asked to select the better one.
+				The evaluation results are shown below. Each element stands for a contrastive result, for example, the
+				number “2985(255)” means our result is preferred by 2,985 times while the corresponding baseline method
+				 is favored by 255 times.
+         	</p>
+         	<p align="center">
+         		<strong class="fig-label">Table 2. </strong>
+				Comparison between our importance map and 8 baseline maps when combined with 3 different carriers on S-Retarget dataset.
+		  		<img src="images/SPR/Table2.png" alt="" width="600" height="548" align="bottom" />
+		 	</p>
+		 	<p align="center">
+		 		<strong class="fig-label">Table 3. </strong>
+				Comparisons with state-of-the-art retargeting systems on S-Retarget dataset.
+		  		<img src="images/SPR/Table3.png" alt="" width="500" height="48" align="bottom" />
+		 	</p>
+		 	<p align="center">
+		 		<strong class="fig-label">Table 4. </strong>
+				Comparison between our importance map and 8 baseline maps when combined with 3 carriers on RetargetMe dataset.
+		  		<img src="images/SPR/Table4.png" alt="" width="600" height="101" align="bottom" />
+		 	</p>
 		<div class="line"></div>
 	</div>
 
 
-
+<!-- --------------------------------
+-
+- Paper
+-
+---- --------------------------------
+-->
 <div id="cont">
 		<div class="wrap">        	
 	    	<h2 id="subject">Paper</h2>
 			<div class="paper-info-box" align="center">
 				<div class="paper-title-box">
-					SP-DIR: Semantic Preserving Deep Image Retargeting
+					Semantic Preserving Retargeting
 				</div>
 				<div class="paper-author-box">
- 					Si Liu, Zhen Wei
+ 					Si Liu, Zhen Wei, Yao Sun, Xinyu Ou, Xiaochun Cao, Shuicheng Yan
 				</div>
 			</div>
 		      <div align="center">
 			      <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
 			        <tr>
-			          <!--
-			          Paper preview image
-			          <td width="18%" align='center'> <a target="_blank" href="http://arxiv.org/abs/1512.07928"> <div align="center"> <img src='images/paper.png' width="140" height="180"></div></a> </td>
-			          -->
-			          <td width="18%" align='center'> <a target="_blank"> <div align="center"> <img src='images/SPR/kidding.png' width="140" height="180"></div></a> </td>
-                                  <td width="82%">
-                                    <pre>
-                                      <code>
-@inproceedings{liu2016SP_DIR,
-  title={SP-DIR: Semantic Preserving Deep Image Retargeting},
-  author={Liu, Si and Wei, Zhen},
+			          <td width="18%" align='center'> <a target="_blank"> <div align="center"> <img src='images/SPR/paper.png' width="140" height="198"></div></a></td>
+                      <td width="82%">
+                           <pre>
+                              <code>
+@inproceedings{liu2016Semantic,
+  title={Semantic Preserving Retargeting},
+  author={Liu, Si and Zhen, Wei and Yao, Sun and Xinyu Ou and Xiaochun Cao and Shuicheng Yan},
   journal = {arXiv preprint arXiv:1605.xxxxxx},
   year={2016}
 }
-                                      </code>
-                                    </pre>
-                                  </td>
+                                </code>
+                            </pre>
+                       </td>
 
 <!-- 
                                   <td width="41%" align='center'> <a href="data/poster_CVPR2011_event.pdf"> <div align="center"> <img src='images/poster.png'></div></a> </td>
@@ -167,13 +341,15 @@ balabalabalabala
       </div>
 
 
-
-
-
-
+<!-- --------------------------------
+-
+- Code & Model
+-
+---- --------------------------------
+-->
     <div id="cont">
 		<div class="wrap">        	
-	    	<h2 id="subject">Code</h2>
+	    	<h2 id="subject">Code & Model</h2>
          <p align="justify">
             The code and trained model for the proposed method will be released soon.
          </p>
@@ -181,6 +357,13 @@ balabalabalabala
     	</div>
 	</div>
 
+
+<!-- --------------------------------
+-
+- References
+-
+---- --------------------------------
+-->
   	<div id="cont">
      	<div class="wrap">
          <h2 id="subject">References</h2>
@@ -191,6 +374,8 @@ balabalabalabala
             <li class="ref-item">P. O. Pinheiro and R. Collobert. From image-level to pixel-level labeling with convolutional networks. In CVPR, 2015.</li>
             <li class="ref-item">S. Hong, H. Noh, and B. Han. Decoupled deep neural network for semi-supervised semantic segmentation. In NIPS, 2015. </li>
             -->
+            <li class="ref-item">Z. Bylinskii, T. Judd, A. Borji, L. Itti, F. Durand, A. Oliva and A. Torralba. MIT Saliency Benchmark. <a href="http://saliency.mit.edu/">http://saliency.mit.edu/</a>.</li>
+            <li class="ref-item">R. Michael, G. Diego, S. Olga and S. Ariel. A comparative study of image retargeting. In TOG, 2010.</li>
          </ul>
       </div>
  	</div>
